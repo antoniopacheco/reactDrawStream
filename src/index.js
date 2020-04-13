@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import CanvasDraw from "react-canvas-draw";
 
-export const ReactDrawStream = ({ onGetStream }) => {
+export const ReactDrawStream = ({ onGetStream, ...props }) => {
   let canvasRef = null;
   useEffect(() => {
     if (canvasRef) {
@@ -13,5 +13,7 @@ export const ReactDrawStream = ({ onGetStream }) => {
     }
   }, [canvasRef]);
 
-  return <CanvasDraw ref={(canvasDraw) => (canvasRef = canvasDraw)} />;
+  return (
+    <CanvasDraw ref={(canvasDraw) => (canvasRef = canvasDraw)} {...props} />
+  );
 };

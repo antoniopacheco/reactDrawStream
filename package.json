@@ -1,6 +1,6 @@
 {
   "name": "reactdrawstream",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "drawing on canvas returning a stream",
   "main": "lib/index.js",
   "scripts": {
